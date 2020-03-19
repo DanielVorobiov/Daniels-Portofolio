@@ -25,7 +25,7 @@ SECRET_KEY = '$za!)z0)cq08s&1o@3a1of!hr@3n&e9gl51s6_n)fudokf-8in'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['192.168.0.5', 'localhost', '127.0.0.1']
 SITE_ROOT = os.path.dirname(os.path.realpath(__file__))
 STATICFILES_DIRS = (
   os.path.join(SITE_ROOT, 'static/'),

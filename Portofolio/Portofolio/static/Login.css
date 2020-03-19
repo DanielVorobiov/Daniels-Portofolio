@@ -11,4 +11,11 @@ margin-top: 10px;
 }
 
 
-
+.col-md-6{
+margin: auto auto;
+}
+.image{
+width:70%
+height:auto
+margin: auto auto;
+}
