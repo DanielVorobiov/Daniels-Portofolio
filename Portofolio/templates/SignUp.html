@@ -1,0 +1,63 @@
+    <!DOCTYPE html>
+    {% load static %}
+<html lang="en">
+<head>
+  <title>Sign up</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="{% static 'Login.css' %}">
+
+</head>
+<body>
+
+<div class="container">
+  <div class="row">
+    <div class= "col-md-6 order-md-2 right-side" >
+      <h2>Sign Up</h2>
+      <form class="input" >
+        <div class="form-group">
+          <label for="FirstName">First Name</label>
+          <input type="FirstName" class="form-control" id="FirstName" placeholder="Enter First Name" name="First Name"required>
+        </div>
+        <div class="form-group">
+          <label for="LastName">Last Name</label>
+          <input type="LastName" class="form-control" id="LastName" placeholder="Enter Last Name" name="Last Name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" class="form-control" id="email" placeholder="Enter Email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="bday">Birthday</label>
+          <input type="date" class="form-control" id="bday" name="bday" required>
+        </div>
+        <div class="form-group">
+        <label for="gender">Gender</label>
+        <select class="form-control" id="gender">
+          <option>Female</option>
+          <option>Male</option>
+          <option>Other</option>
+        </select>
+        </div>
+        <div class="form-group">
+          <label for="Username">Username</label>
+          <input type="Username" class="form-control" id="Username" placeholder="Enter Username" name="Username" required>
+        </div>
+        <div class="form-group">
+          <label for="pswd">Password:</label>
+          <input type="password" class="form-control" id="pswd" placeholder="Enter password" name="pswd" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Sign Up</button>
+        <p class="Signupq">Already have an account? <a href="/login">Log in</a></p>
+      </form>
+    </div>
+    <div class="col-md-6 order-md-1" >
+      <img src="https://lh3.googleusercontent.com/veqdpKdsTD__zHRtVAa9jiH0m9j8Npa8hafPNGf_Id5LhIgFxhKAjhkZwx1S3yxzrZdKErcxGVArDIzs_UKCHns-gICgJFZF4e7PRnkQUDp8runJwlZ6btot86gND34P3KAJPCWy-paUo8FWMxFVBbk9knVVkqaKFlN-yJZcUnQsiZI5LV_qR1TVicH1hi-tqGTXy7HJpmZYP-rLWNsCEESvai7VfUYyB8MiqawnHuXJXHflkMRTHfYvss6f_fcAgHSOrHn4HhPHqDQlldgpIw6AiB_GlJfyp962A1nkpMnwTVE8--Fp-WFKCKVQe4ifjvb7cPBgnoVsNZgT1x9ZzaDtwe5II9XOfvPAXnwHKAWn2kuVkrt74C9Bn44-R18As6HA3rJ8aLnymksaigwD7R9uovl6rdJi9z6ehJ60t3mtAzv8c1Pm7RpVWsUNWH8SgmwF6kYEZ0i56X-ohbPkLruYUugbvsaI29OWnw-jeikFMjEGT61soPY3xSE-HxmOjXbYzjeO6jutcpe6VNK7Y0xONe6UMZu15CZZr4L-eUVcnK8wwHHw9QHXsHYk37sx2-micvNw49etO2fU7vP4eEXMf7JJkq2H1xI656A2r4QGt8jWBG_LdCQ3B1j6YW79NQRwjTFgH0gPakWIrcx3NSttT7-0SwiLdAwp-xR_1EaSzg01d0JyvmRDyJet19MCLv4EtpD15UqTHo7bA0_iE6qPrwzyF-agXdQ2glsvloWJVz8aBppKH0g=w603-h904-no" height="729">
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
