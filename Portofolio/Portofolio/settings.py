@@ -28,7 +28,7 @@ DEBUG = True
 ALLOWED_HOSTS = ['192.168.0.5', 'localhost', '127.0.0.1']
 SITE_ROOT = os.path.dirname(os.path.realpath(__file__))
 STATICFILES_DIRS = (
-  os.path.join(SITE_ROOT, 'static/'),
+  os.path.join(SITE_ROOT, 'registration/static/'),
 )
 
 
@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'crispy_forms',
+    'registration.apps.RegistrationConfig',
 ]
 
 MIDDLEWARE = [
@@ -58,7 +60,7 @@ ROOT_URLCONF = 'Portofolio.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ["templates",],
+        'DIRS': ["Portofolio/templates","registration/templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -122,3 +124,14 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+CRISPY_TEMPLATE_PACK = "bootstrap4"
+
+LOGIN_REDIRECT_URL = "/home"
+LOGOUT_REDIRECT_URL = "/home"
+
+EMAIL_BACKEND = 'sendgrid_backend.SendgridBackend'
+
+SENDGRID_API_KEY = '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'
+
+SENDGRID_SANDBOX_MODE_IN_DEBUG=False

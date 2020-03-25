@@ -11,6 +11,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="HTML File" />
         <option value="Python Script" />
       </list>
     </option>
@@ -20,8 +21,15 @@
   </component>
   <component name="ProjectId" id="1ZLmnRxX6BjU4d5cOByLnxGMzet" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+  </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\vorob\Desktop\univer\Web_Dev\Daniels Portofolio\Portofolio\registration\templates\registration" />
+      <recent name="C:\Users\vorob\Desktop\univer\Web_Dev\Daniels Portofolio\Portofolio\registration" />
+      <recent name="C:\Users\vorob\Desktop\univer\Web_Dev\Daniels Portofolio\Portofolio\registration\templates" />
       <recent name="C:\Users\vorob\Desktop\univer\Web_Dev\Daniels Portofolio\Portofolio\Portofolio" />
       <recent name="C:\Users\vorob\Desktop\univer\Web_Dev\Daniels Portofolio\Portofolio" />
     </key>
@@ -56,7 +64,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
