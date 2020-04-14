@@ -23,17 +23,21 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
       </button>
-      <a class="navbar-brand" href="#">Daniel Vorobiov's Work</a>
+      <a class="navbar-brand" href="/">Daniel Vorobiov's Work</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
+        <li><a href="/">Home</a></li>
         <li><a href="/about">About</a></li>
         <li><a href="/gallery">Gallery</a></li>
-        <li><a href="#">Contact</a></li>
+        <li  class="active"><a href="/contact">Contact</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        {%if user.is_authenticated%}
+        <li><a>Hello, {{ user.get_username}}</a></li>
+        {%else%}
+          <li><a href="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        {%endif%}
       </ul>
     </div>
   </div>
