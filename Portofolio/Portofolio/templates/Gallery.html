@@ -44,10 +44,25 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
         <li><a href="/about">About</a></li>
         <li class="active"><a href="/gallery">Gallery</a></li>
         <li><a href="/contact">Contact</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        {%if user.is_authenticated%}
-        <li><a>Hello, {{ user.get_username}}</a></li>
+         {%if user.is_authenticated%}
+          {%if user.is_superuser%}
+            {%if user.get_username == "Daniel_Vorobiov"%}
+              <li><a>Hello Creator</a></li>
+              <li><a href="/logout"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+            {%elif user.get_username == "Admin"%}
+              <li><a>Hello, Admin </a></li>
+              <li><a href="/logout"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+            {%elif user.get_username == "admin"%}
+              <li><a>Hello, Admin </a></li>
+              <li><a href="/logout"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+            {%else%}
+              <li><a>Hello, Admin {{ user.get_username}}</a></li>
+              <li><a href="/logout"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+            {%endif%}
+          {%else%}
+            <li><a>Hello,{{ user.get_username}}</a></li>
+            <li><a href="/logout"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+          {%endif%}
         {%else%}
           <li><a href="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
         {%endif%}
