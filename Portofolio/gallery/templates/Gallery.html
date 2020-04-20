@@ -44,6 +44,11 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
         <li><a href="/about">About</a></li>
         <li class="active"><a href="/gallery">Gallery</a></li>
         <li><a href="/contact">Contact</a></li>
+          {%if user.is_superuser%}
+        <li><a href="/admin">Admin Panel</a></li>
+        {%endif%}
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
          {%if user.is_authenticated%}
           {%if user.is_superuser%}
             {%if user.get_username == "Daniel_Vorobiov"%}
