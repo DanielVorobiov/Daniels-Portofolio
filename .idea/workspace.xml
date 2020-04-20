@@ -11,8 +11,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -27,11 +27,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\vorob\Desktop\univer\Web_Dev\Daniels Portofolio\Portofolio\gallery\templates" />
+      <recent name="C:\Users\vorob\Desktop\univer\Web_Dev\Daniels Portofolio\Portofolio\gallery" />
+      <recent name="C:\Users\vorob\Desktop\univer\Web_Dev\Daniels Portofolio\Portofolio\gallery\templates\gallery" />
       <recent name="C:\Users\vorob\Desktop\univer\Web_Dev\Daniels Portofolio\Portofolio\registration\templates\registration" />
       <recent name="C:\Users\vorob\Desktop\univer\Web_Dev\Daniels Portofolio\Portofolio\registration" />
-      <recent name="C:\Users\vorob\Desktop\univer\Web_Dev\Daniels Portofolio\Portofolio\registration\templates" />
-      <recent name="C:\Users\vorob\Desktop\univer\Web_Dev\Daniels Portofolio\Portofolio\Portofolio" />
-      <recent name="C:\Users\vorob\Desktop\univer\Web_Dev\Daniels Portofolio\Portofolio" />
     </key>
   </component>
   <component name="RunDashboard">
