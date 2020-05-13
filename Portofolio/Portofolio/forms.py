@@ -9,4 +9,4 @@ class ContactForm(forms.Form):
     name = forms.CharField(max_length=80)
     email = forms.EmailField()
     message = forms.CharField(widget=forms.Textarea)
-    forcefield = forms.CharField(required=False,widget=forms.HiddenInput, label="Leave empty", validators=[should_be_empty])
+    forcefield = forms.CharField(required=False, widget=forms.HiddenInput, label="Leave empty", validators=[should_be_empty])

@@ -8,4 +8,4 @@ def gallery(request):
     photos2=Photo.objects.all()[3:6]
     photos3=Photo.objects.all()[6:9]
     photos4 = Photo.objects.all()[9:13]
-    return render(request, 'Gallery.html', {"photos1": photos1,"photos2":photos2,"photos3":photos3, "photos4":photos4})
+    return render(request, 'Gallery.html', {"photos1": photos1, "photos2":photos2, "photos3":photos3, "photos4":photos4})

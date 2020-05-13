@@ -2,7 +2,7 @@ from django.http import HttpResponse
 from django.shortcuts import render
 from .forms import ContactForm
 from django.core.mail import send_mail, BadHeaderError
-from django.http import HttpResponse
+
 
 
 
@@ -17,8 +17,6 @@ def login(request):
 def signup(request):
     return render(request,"SignUp.html")
 
-def gallery(request):
-    return render(request, "Gallery.html")
 
 def about(request):
     return render(request, "About.html")
@@ -32,7 +30,7 @@ def contact(request):
             subject = f'Message from {form.cleaned_data["name"]}'
             message = form.cleaned_data["message"]
             sender = form.cleaned_data["email"]
-            recipients = ["vorobiov.daniel@gmail.com","balaurdorina@gmail.com"]
+            recipients = ["vorobiov.daniel@gmail.com"]
             try:
                 send_mail(subject,message,sender,recipients,fail_silently=True)
             except BadHeaderError:

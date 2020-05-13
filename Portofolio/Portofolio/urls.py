@@ -15,7 +15,7 @@ urlpatterns = [
     path('contact/', views.contact, name="contact"),
     path('signup/', regviews.registration, name="registration"),
     path('admin/', admin.site.urls),
-    #path('test/',galviews.gallery,name="gallery"),
+
     path('', include("django.contrib.auth.urls")),
 ]
 admin.site.site_header = 'Daniels Portofolio Admin Page'

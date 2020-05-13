@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+from dotenv import load_dotenv
+load_dotenv()
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -133,8 +135,11 @@ MEDIA_URL = '/media/'
 LOGIN_REDIRECT_URL = "/home"
 LOGOUT_REDIRECT_URL = "/home"
 
-EMAIL_BACKEND = 'sendgrid_backend.SendgridBackend'
+EMAIL_HOST = 'smtp.sendgrid.net'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'apikey'
+EMAIL_HOST_PASSWORD = os.environ.get('SENDGRID_API_KEY')
 
-SENDGRID_API_KEY = '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'
 
-SENDGRID_SANDBOX_MODE_IN_DEBUG=False
+
