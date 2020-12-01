@@ -68,6 +68,7 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
       <h4 class="w3-center"><b>Contact Me</b></h4>
       <p>Do you want me to photograph you? Fill out the form and fill me in with the details :) I love meeting new people!</p>
       <form action="" method="POST">
+          <form action="" method="POST">
           {%csrf_token%}
           {% for hidden in form.hidden_fields%}
           {{field}}
@@ -84,5 +85,7 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
       </form>
     </div>
   </div>
+
+
 </body>
 </html>

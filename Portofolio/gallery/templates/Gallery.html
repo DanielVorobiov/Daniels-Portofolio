@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gallery</title>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<style>
+.navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+.w3-quarter img{margin-bottom: -6px; cursor: pointer}
+.w3-quarter img:hover{opacity: 0.6; transition: 0.3s}
+</style>
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+      </button>
+      <a class="navbar-brand" href="/">Daniel Vorobiov's Work</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li ><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li class="active"><a href="/gallery">Gallery</a></li>
+        <li><a href="/contact">Contact</a></li>
+          {%if user.is_superuser%}
+        <li><a href="/admin">Admin Panel</a></li>
+        {%endif%}
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+         {%if user.is_authenticated%}
+          {%if user.is_superuser%}
+            {%if user.get_username == "Daniel_Vorobiov"%}
+              <li><a>Hello Creator</a></li>
+              <li><a href="/logout"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+            {%elif user.get_username == "Admin"%}
+              <li><a>Hello, Admin </a></li>
+              <li><a href="/logout"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+            {%elif user.get_username == "admin"%}
+              <li><a>Hello, Admin </a></li>
+              <li><a href="/logout"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+            {%else%}
+              <li><a>Hello, Admin {{ user.get_username}}</a></li>
+              <li><a href="/logout"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+            {%endif%}
+          {%else%}
+            <li><a>Hello,{{ user.get_username}}</a></li>
+            <li><a href="/logout"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+          {%endif%}
+        {%else%}
+          <li><a href="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        {%endif%}
+      </ul>
+    </div>
+  </div>
+</nav>
+  <div class="w3-row w3-grayscale-min">
+      <div class="w3-quarter">
+
+            {% for photo in photos1 %}
+                <img src="{{ photo.image.url }}"style="width:100%" onclick="onClick(this)" alt="{{photo.title}}">
+            {% endfor %}
+
+    </div>
+    <div class="w3-quarter">
+        {% for photo in photos2 %}
+                <img src="{{ photo.image.url }}"style="width:100%" onclick="onClick(this)" alt="{{photo.title}}">
+            {% endfor %}
+    </div>
+
+
+    <div class="w3-quarter">
+      {% for photo in photos3 %}
+                <img src="{{ photo.image.url }}"style="width:100%" onclick="onClick(this)" alt="{{photo.title}}">
+            {% endfor %}
+    </div>
+
+    <div class="w3-quarter">
+      {% for photo in photos4 %}
+                <img src="{{ photo.image.url }}"style="width:100%" onclick="onClick(this)" alt="{{photo.title}}">
+            {% endfor %}
+    </div>
+  </div>
+
+
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+<footer class="container-fluid text-center">
+  <p> &copy All rights reserved 2020</p>
+
+</footer>
+ <script>
+
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+ </script>
+
+</body>
+</html>
