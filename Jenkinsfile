@@ -1,5 +1,3 @@
-#!/bin/bash
-
 pipeline{
     agent any
     options {
@@ -10,7 +8,6 @@ pipeline{
             steps { 
                 sh 'make' 
             }
-        }
         }
     }
 }
