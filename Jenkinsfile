@@ -6,8 +6,7 @@ pipeline{
     stages {
         stage('build'){
             steps{
-                print("Hello World");
-               
+                manage.py test Portofolio.tests            
             }
         }
     }
