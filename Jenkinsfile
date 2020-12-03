@@ -1,9 +1,10 @@
 pipeline {
-    agent { docker { image 'python:3.9.0' } }
+    agent any{
     stages {
         stage('build') {
             steps {
                 sh 'python print("Hello World")'
+            }
             }
         }
     }
