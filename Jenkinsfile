@@ -8,8 +8,8 @@ pipeline{
     stages {
         stage('build'){
             steps{
-                
-                sh 
+                script{
+                    sh }
                 //python manage.py test Portofolio.tests   
                 
             }
