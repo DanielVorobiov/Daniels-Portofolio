@@ -1,5 +1,5 @@
 pipeline{
-    agent agent {
+    agent {
         docker { image 'python:3.9.0' }
     }
     options {
@@ -8,7 +8,7 @@ pipeline{
     stages {
         stage('Build') { 
             steps { 
-                sh 'make' 
+                print(2+2) 
             }
         }
     }
