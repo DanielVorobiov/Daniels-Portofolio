@@ -7,6 +7,7 @@ pipeline{
         stage('build'){
             steps{
                 print("Hello World")
+                python manage.py runserver
             }
         }
     }
