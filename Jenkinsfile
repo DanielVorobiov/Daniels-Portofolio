@@ -9,7 +9,7 @@ pipeline{
         stage('build'){
             steps{
                 
-                sh 'cd Portofolio && ls'
+                cmd 'cd Portofolio '
                 //python manage.py test Portofolio.tests   
                 
             }
