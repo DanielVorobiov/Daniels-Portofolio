@@ -7,7 +7,7 @@ pipeline{
         stage('build'){
             steps{
                 echo "Hello World"
-                sh ' pip install pandas'
+                sh 'ls'
             }
         }
     }
