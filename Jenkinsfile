@@ -4,7 +4,7 @@ pipeline {
         stage('build') {
             steps {
                 bat 'dir'
-                bat 'cd \Portofolio'
+                bat 'cd /Portofolio'
                 bat 'dir'
                 
         //        bat ' source venv/Scripts/activate && pip install --upgrade -r requirements.txt'
