@@ -7,7 +7,7 @@ pipeline{
         stage('build'){
             steps{
                 script{
-                manage.py test Portofolio.tests   
+                python manage.py test Portofolio.tests   
                 }
             }
         }
