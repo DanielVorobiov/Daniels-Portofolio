@@ -9,7 +9,7 @@ pipeline{
         stage('build'){
             steps{
                 
-                dir
+                sh 
                 //python manage.py test Portofolio.tests   
                 
             }
