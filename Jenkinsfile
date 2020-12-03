@@ -4,7 +4,7 @@ pipeline {
         stage('build') {
             steps {
                 echo "Hello World!"
-                bat 'echo %PATH%'
+                bat 'virtualenv env && source env/bin/activate && pip install --upgrade -r requirements.txt'
             }
         }
     }
