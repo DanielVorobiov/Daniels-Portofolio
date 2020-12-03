@@ -11,6 +11,6 @@ pipeline{
       script {
         sh "ls -l"
       }
-    }
+    }}
   }
 }
