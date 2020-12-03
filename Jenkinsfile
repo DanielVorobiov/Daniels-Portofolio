@@ -4,10 +4,10 @@ pipeline {
         stage('build') {
             steps {
                 bat 'dir'
-                bat 'cd venv/Scripts/ && activate && cd .. && cd .. &&  cd Portofolio && assoc .py=Python.File && manage.py'// test Portofolio.tests'
+                bat 'cd venv/Scripts/ && activate && cd .. && cd .. &&  cd Portofolio   && manage.py'// test Portofolio.tests'
                 bat 'dir'
                 
-        //        bat ' source venv/Scripts/activate && pip install --upgrade -r requirements.txt'
+        //        bat ' source venv/Scripts/activate && pip install --upgrade -r requirements.txt'assoc .py=Python.File
             }
         }
     }
