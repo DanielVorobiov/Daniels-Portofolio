@@ -1,15 +1,16 @@
 pipeline{
     agent {
-        docker { image 'python:3.9.0' }
+        label 'N1'
     }
     options {
         timestamps()
     }
-    stages {
-        stage('Build') { 
-            steps { 
-                print(2+2) 
-            }
-        }
+    stage('Run Shell Script on Special Node') {
+  steps {
+    node('SpecialNodeLabel') {
+      script {
+        sh "ls -l"
+      }
     }
+  }
 }
