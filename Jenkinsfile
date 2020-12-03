@@ -3,7 +3,8 @@ pipeline{
     options {
         timestamps()
     }
-    stages{
+    stages{ 
+        stage{
         node {
   // If you are having issues with your project not getting updated, 
   // try uncommenting the following lines.
@@ -20,5 +21,5 @@ pipeline{
   // Invoke Django's tests
   sh 'source env/bin/activate && python ./manage.py runtests'
 }
-            }
+        }}
 }
