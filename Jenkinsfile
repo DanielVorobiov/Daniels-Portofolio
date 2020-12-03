@@ -6,7 +6,7 @@ pipeline{
     stages{ 
         stage('build') {
             steps{
-                stage{
+                step{
                     ls}
             }
         }
