@@ -1,10 +1,12 @@
-pipeline {
-    agent any{
+pipeline{
+    agent any
+    option {
+        timestamps()
+    }
     stages {
-        stage('build') {
-            steps {
-                sh 'python print("Hello World")'
-            }
+        stage('build'){
+            steps{
+                echo "Hello World"
             }
         }
     }
