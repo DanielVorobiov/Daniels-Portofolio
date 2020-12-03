@@ -6,12 +6,11 @@ pipeline{
         timestamps()
     }
     stages {
-        stage('build'){
-            steps{
-                sh 'make'
-                //python manage.py test Portofolio.tests   
-                
+        stage('Build') { 
+            steps { 
+                sh 'make' 
             }
+        }
         }
     }
 }
