@@ -1,3 +1,4 @@
+#!/usr/bin/perl
 pipeline{
     agent any
     options {
