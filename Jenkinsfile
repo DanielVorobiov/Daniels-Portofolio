@@ -1,7 +1,5 @@
 pipeline{
-    agent {
-        label 'N1'
-    }
+    agent none
     options {
         timestamps()
     }
