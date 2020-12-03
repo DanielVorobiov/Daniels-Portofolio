@@ -4,7 +4,8 @@ pipeline{
     }
     options {
         timestamps()
-    }stages{
+    }
+    stages{
     stage('Run Shell Script on Special Node') {
   steps {
     node('SpecialNodeLabel') {
