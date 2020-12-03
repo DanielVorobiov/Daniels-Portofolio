@@ -1,15 +1,13 @@
-#!/usr/bin/perl
-pipeline{
-    agent any
-    options {
-        timestamps()
-    }
-    stages{ 
+pipeline {
+    agent { label 'master' }
+    stages {
         stage('build') {
-            steps{
-                node {
-    sh 'echo hello world'
-}}
+            steps {
+                echo "Hello World!"
+                sh "echo Hello from the shell"
+                sh "hostname"
+                sh "uptime"
+            }
         }
     }
 }
