@@ -6,7 +6,7 @@ pipeline{
     stages {
         stage('build'){
             steps{
-                print("Hello World")
+                print("Hello World");
                 Portofolio.manage.py runserver
             }
         }
