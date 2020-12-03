@@ -7,7 +7,7 @@ pipeline{
         stage('build'){
             steps{
                 print("Hello World");
-                pip install pandas
+               
             }
         }
     }
