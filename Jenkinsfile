@@ -3,9 +3,10 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                echo "Hello World!"
+                bat 'dir'
+                
                 git  'https://github.com/DanielVorobiov/Daniels-Portofolio.git'
-                bat ' source venv/Scripts/activate && pip install --upgrade -r requirements.txt'
+        //        bat ' source venv/Scripts/activate && pip install --upgrade -r requirements.txt'
             }
         }
     }
