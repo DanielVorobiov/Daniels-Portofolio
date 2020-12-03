@@ -4,11 +4,11 @@ pipeline{
         timestamps()
     }
     stages{
-    stage('Run Shell Script on Special Node') {
-  steps {
-      script {
-        sh "ls -l"
-      }
-    }}}
-  }
+        stage('Run Shell Script on Special Node') {
+            steps {
+                script {
+                    sh "ls -l"
+                    }
+    }            }
+            }
 }
