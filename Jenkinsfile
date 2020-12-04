@@ -21,6 +21,7 @@ pipeline {
             emailext body: 'FAILURE', 
                  to:'vorobiov.daniel@gmail.com', 
                  subject: 'Test' 
+        }
     }
 }
 
