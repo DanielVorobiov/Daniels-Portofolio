@@ -13,7 +13,12 @@ pipeline {
     }
     post {
         always {
-            emailext body: 'Hi', recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']], subject: 'Test'
+            emailext body: "hi",
+            mimeType: 'text/html',
+            subject: "[Jenkins] ${jobName}",
+            to: vorobiov.daniel@gmail.com,
+            replyTo: "${mailRecipients}",
+            recipientProviders: [[$class: 'CulpritsRecipientProvider']]
         }
     }
 }
