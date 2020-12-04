@@ -14,7 +14,7 @@ pipeline {
     post {
         success {
              emailext body: 'SUCCESSFULL', 
-                 to:'vorobiov.daniel@gmail.com && balaurdorina@gmail.com && eric199k@gmail.com && prisacarimarina06@gmail.com', 
+                 to:'vorobiov.daniel@gmail.com balaurdorina@gmail.com eric199k@gmail.com prisacarimarina06@gmail.com', 
                  subject: 'Test'         
         }
         failure{
