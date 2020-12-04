@@ -16,7 +16,7 @@ class GalleryTestCase(TestCase):
         total = 0
         for file in os.listdir("./media/gallery"):
             total+=1
-        self.assertEqual(total, 19)
+        self.assertEqual(total, 18)
 
  
 
