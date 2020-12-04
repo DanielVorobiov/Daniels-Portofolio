@@ -20,15 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5ac87ea4-d851-4c1d-9351-797c9cd7b16b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Portofolio/tests/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Portofolio/tests/form_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Portofolio/tests/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portofolio/Portofolio/tests/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portofolio/media/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portofolio/Portofolio/tests/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portofolio/media/gallery/Безымянный.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portofolio/registration/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portofolio/registration/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Portofolio/tests/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portofolio/tests/tests.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

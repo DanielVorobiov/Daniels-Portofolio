@@ -18,9 +18,7 @@ class GalleryTestCase(TestCase):
             total+=1
         self.assertEqual(total, 18)
 
-    def test_registration(self):
-        files= os.listdir("./registration")
-        self.assertEqual("apps.py" in files, True)
+ 
 
 
 
