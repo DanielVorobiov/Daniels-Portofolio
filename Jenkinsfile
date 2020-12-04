@@ -26,23 +26,5 @@ pipeline {
 }
 
 
-                bat 'dir'
-                
-      
-            }
-        }
-    }
-    post {
-        success {
-             emailext body: 'SUCCESSFULL', 
-                 to:'vorobiov.daniel@gmail.com', 
-                 subject: 'Test'         
-        }
-        failure{
-            emailext body: 'FAILURE', 
-                 to:'vorobiov.daniel@gmail.com', 
-                 subject: 'Test' 
-        }
-    }
-}
+
 
