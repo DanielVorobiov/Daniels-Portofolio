@@ -13,9 +13,11 @@ pipeline {
     }
     post {
         always {
+            emailextrecipients recipientProviders:["balaurdorina@gmail.com", "eric199k@gmail.com"]
             emailext body: 'hi bitch, this is jenkins',
-                      recipientProviders:["balaurdorina@gmail.com", "eric199k@gmail.com"],
+                      
                     subject:'Report'
+               
                 
                 
         }
