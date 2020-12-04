@@ -15,7 +15,7 @@ pipeline {
         always {
             emailext body: '''${SCRIPT, template="build-report.groovy"}''',
                 subject: "[Jenkins] REPORT",
-                to: "user@example.com"
+                to: "vorobiov.daniel@gmail.com"
         }
     }
 }
