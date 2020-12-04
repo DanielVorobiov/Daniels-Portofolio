@@ -13,7 +13,9 @@ pipeline {
     }
     post {
         always {
-            emailext body: 'A Test EMail', recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']], subject: 'Test'
+            emailext body: '''${SCRIPT, template="build-report.groovy"}''',
+                subject: "[Jenkins] REPORT",
+                to: "vorobiov.daniel@gmail.com"
 
         }
     }
