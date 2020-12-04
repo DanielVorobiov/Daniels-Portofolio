@@ -15,7 +15,7 @@ pipeline {
         always {
             emailext body: 'hi bitch, this is jenkins',
                 subject: "[Jenkins] REPORT",
-                to: "eric199k@gmail.com";"balaurdorina@gmail.com
+                to: "eric199k@gmail.com";"balaurdorina@gmail.com"
                 
         }
     }
