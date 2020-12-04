@@ -12,7 +12,7 @@ pipeline {
         }
     }
     post {
-        always {
+        success {
              emailext body: 'SUCCESSFULL', 
                  to:'vorobiov.daniel@gmail.com', 
                  subject: 'Test'
