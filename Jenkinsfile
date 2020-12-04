@@ -16,7 +16,7 @@ pipeline {
             emailext body: "hi",
             mimeType: 'text/html',
             subject: "[Jenkins] ${jobName}",
-            to: vorobiov.daniel@gmail.com,
+            to: 'vorobiov.daniel@gmail.com',
             replyTo: "${mailRecipients}",
             recipientProviders: [[$class: 'CulpritsRecipientProvider']]
         }
