@@ -4,4 +4,4 @@ class GalleryTestCase(TestCase):
 
     def test_gallery(self):
         gallery = "Gallery"
-        self.assertEqual(gallery, "Gallery")
+        self.assertEqual(gallery, "Galery")
